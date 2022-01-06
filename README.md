@@ -2,7 +2,7 @@
 
 ![alt text](https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Franz_Ferdinand_-_O2_Academy_Brixton_-_Saturday_24th_February_2018_FranzFBrixton240218-38_%2826699814248%29.jpg/450px-Franz_Ferdinand_-_O2_Academy_Brixton_-_Saturday_24th_February_2018_FranzFBrixton240218-38_%2826699814248%29.jpg)
 
-- This is a Music App built in React which lists some of the singles of the group Franz Ferdinand. The App contains the following:
+This is a Music App built in React which lists some of the singles of the group Franz Ferdinand. The App contains the following:
   - An introduction to the Band
   - A list of their songs
   - Links to their music videos
