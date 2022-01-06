@@ -31,6 +31,7 @@ const Songs = () => {
         async function getLyrics(){
           console.log("Lyrics here");
           console.log(artistinfo.artist);
+          console.log(`https://api.lyrics.ovh/v1/${artistinfo.artist}/${artistinfo.title}`);
           let data = await axios.get(`https://api.lyrics.ovh/v1/${artistinfo.artist}/${artistinfo.title}`);
           console.log(data);
           setLyrics(data);
@@ -51,7 +52,7 @@ const Songs = () => {
         >
           Take Me Out (Released 12th January 2004)
         </a><p> Likes: {s1likes}</p> <button onClick={() => updateLikes(s1likes, s1setLikes)}>+</button>
-        <p> Get Lyrics </p> <button onClick={() => updateLyrics("Franz Ferdinand", "Take Me Out")}> Fetch</button>
+        <p> Get Lyrics </p> <button onClick={() => updateLyrics("Franz%20Ferdinand", "Take%20Me%20Out")}> Fetch</button>
         </li>
         <li><a
           className="App-link"
