@@ -1,8 +1,4 @@
-### Study Notes
-
-| [Webpack Setup](https://github.com/getfutureproof/fp_guides_wiki/wiki/Intro-to-Module-Bundlers-and-Webpack) | [Intro to React](https://github.com/getfutureproof/fp_guides_wiki/wiki/Intro-to-React) | [Deploy a React client with Netlify](https://github.com/getfutureproof/fp_guides_wiki/wiki/React-Deploy-with-Netlify) |
-
-# Music App: Franz Ferdinan
+# Music App: Franz Ferdinand
 
 - This is a Music App built in React which lists some of the singles of the group Franz Ferdinand. The App contains the following:
   - An introduction to the Band
@@ -16,3 +12,7 @@
 3. `npm install`
 4. `cd our-app`
 5. `npm start`
+
+### Useful React links
+
+| [Webpack Setup](https://github.com/getfutureproof/fp_guides_wiki/wiki/Intro-to-Module-Bundlers-and-Webpack) | [Intro to React](https://github.com/getfutureproof/fp_guides_wiki/wiki/Intro-to-React) | [Deploy a React client with Netlify](https://github.com/getfutureproof/fp_guides_wiki/wiki/React-Deploy-with-Netlify) |
