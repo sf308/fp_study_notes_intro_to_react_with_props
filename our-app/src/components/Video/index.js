@@ -10,10 +10,23 @@ const [ songs, setSongs] = useState([
     { id: 3, title: 'his%20Fire', video: 'https://www.youtube.com/watch?v=haW_ruZ_Be8'}
   ])
 
+  const [ chosenSong, setChosenSong ] = useState();
+
+  const handleSongSelect = songId => {
+    const chosenSong = songs.find(s => s.id === songId);
+    setChosenSong(chosenSong);
+  };
+
   return (
     <div className="Video">
         <h2>{songs[0].title}</h2>
         <ReactPlayer url={songs[0].video} />
+        <h2>{songs[1].title}</h2>
+        <ReactPlayer url={songs[1].video} />
+        <h2>{songs[2].title}</h2>
+        <ReactPlayer url={songs[2].video} />
+        <h2>{songs[3].title}</h2>
+        <ReactPlayer url={songs[3].video} />
     </div>
   )
 
