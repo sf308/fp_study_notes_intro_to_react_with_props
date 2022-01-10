@@ -12,9 +12,10 @@ const Songs = () => {
     artist: "",
     title: ""
   });
-  const [lyrics, setLyrics] = useState(
-    {lyrics: ""}
-  )
+  //const [lyrics, setLyrics] = useState(
+  //  {lyrics: ""}
+  //);
+  const [lyrics, setLyrics] = useState("");
   const updateLikes = (likes, setLikes) => {if (likes ===1){
     setLikes(likes - 1);
   }
@@ -29,17 +30,15 @@ const Songs = () => {
 
   useEffect(() => {
         async function getLyrics(){
-          console.log(artistinfo.artist);
           let data;
           if (artistinfo.artist===""||artistinfo.title===""){
-            console.log("Yes");
             data = await axios.get(`https://api.lyrics.ovh/v1/Franz%20Ferdinand/Take%20Me%20Out`);
           }
           else {
             data = await axios.get(`https://api.lyrics.ovh/v1/${artistinfo.artist}/${artistinfo.title}`);
           }
-          console.log(data.data.lyrics);
           setLyrics(data.data.lyrics);
+          console.log(lyrics);
           }
         getLyrics()
   }, [ artistinfo])
@@ -92,7 +91,7 @@ const Songs = () => {
         <p> Get Lyrics </p> <button> Fetch</button>
         </li>
         </ul>
-        <p>{lyrics.lyrics}</p>
+        <p>{lyrics}Lyrics go here</p>
         </div>
       </header>
     </div>
