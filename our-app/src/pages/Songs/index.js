@@ -31,7 +31,7 @@ const Songs = () => {
   useEffect(() => {
         async function getLyrics(){
           let data;
-          if (artistinfo.artist===""||artistinfo.title===""){
+          if (artistinfo.artist===""&&artistinfo.title===""){
             data = await axios.get(`https://api.lyrics.ovh/v1/Franz%20Ferdinand/Take%20Me%20Out`);
           }
           else {
@@ -66,7 +66,7 @@ const Songs = () => {
         >
           The Dark of the Matinée (Released 19th April 2004)
         </a><p> Likes: {s2likes}</p> <button onClick={() => updateLikes(s2likes, s2setLikes)}>+</button>
-        <p> Get Lyrics </p> <button onClick={() => updateLikes(s2likes, s2setLikes)}> Fetch</button>
+        <p> Get Lyrics </p> <button onClick={() => updateLyrics("Franz%20Ferdinand", "The%20Dark%20of%20the%20Matinee")}> Fetch</button>
         </li>
         <li>
         <a
@@ -77,7 +77,7 @@ const Songs = () => {
         >
           Michael (Released 16th August 2004)
         </a><p> Likes: {s3likes}</p> <button onClick={() => updateLikes(s3likes, s3setLikes)}>+</button>
-        <p> Get Lyrics </p> <button> Fetch</button>
+        <p> Get Lyrics </p> <button onClick={() => updateLyrics("Franz%20Ferdinand", "Michael")}> Fetch</button>
         </li>
         <li>
         <a
@@ -86,12 +86,12 @@ const Songs = () => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          This Fffire (Released 9th February 2004)
+          This Fire (Released 9th February 2004)
         </a><p> Likes: {s4likes}</p> <button onClick={() => updateLikes(s4likes, s4setLikes)}>+</button>
-        <p> Get Lyrics </p> <button> Fetch</button>
+        <p> Get Lyrics </p> <button onClick={() => updateLyrics("Franz%20Ferdinand", "This%20Fire")}> Fetch</button>
         </li>
         </ul>
-        <p>{lyrics}Lyrics go here</p>
+        <p>{lyrics}</p>
         </div>
       </header>
     </div>
