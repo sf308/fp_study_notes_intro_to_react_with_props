@@ -32,12 +32,13 @@ const Songs = () => {
         async function getLyrics(){
           let data;
           if (artistinfo.artist===""&&artistinfo.title===""){
-            data = await axios.get(`https://api.lyrics.ovh/v1/Franz%20Ferdinand/Take%20Me%20Out`);
+            //data = await axios.get(`https://api.lyrics.ovh/v1/Franz%20Ferdinand/Take%20Me%20Out`);t
+            setLyrics("Get Lyrics from above!");
           }
           else {
             data = await axios.get(`https://api.lyrics.ovh/v1/${artistinfo.artist}/${artistinfo.title}`);
+            setLyrics(data.data.lyrics);
           }
-          setLyrics(data.data.lyrics);
           console.log(lyrics);
           }
         getLyrics()

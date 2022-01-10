@@ -5,11 +5,12 @@ import { Routes, Route } from 'react-router-dom';
 import './App.css';
 
 import { Music, Songs } from './pages';
-import { Footer } from './layout';
+import { Header, Footer } from './layout';
 
 function App() {
   return (
     <>
+      <Header />
       <Routes>
         <Route exact path="/" element={<Music />} />
         <Route path="/songs" element={<Songs />} />
