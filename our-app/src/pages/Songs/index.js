@@ -29,14 +29,19 @@ const Songs = () => {
 
   useEffect(() => {
         async function getLyrics(){
-          console.log("Lyrics here");
           console.log(artistinfo.artist);
-          console.log(`https://api.lyrics.ovh/v1/${artistinfo.artist}/${artistinfo.title}`);
-          let data = await axios.get(`https://api.lyrics.ovh/v1/${artistinfo.artist}/${artistinfo.title}`);
-          console.log(data);
-          setLyrics(data);
+          let data;
+          if (artistinfo.artist===""||artistinfo.title===""){
+            console.log("Yes");
+            data = await axios.get(`https://api.lyrics.ovh/v1/Franz%20Ferdinand/Take%20Me%20Out`);
           }
-          getLyrics()
+          else {
+            data = await axios.get(`https://api.lyrics.ovh/v1/${artistinfo.artist}/${artistinfo.title}`);
+          }
+          console.log(data.data.lyrics);
+          setLyrics(data.data.lyrics);
+          }
+        getLyrics()
   }, [ artistinfo])
 
   return (
